@@ -1,4 +1,4 @@
-create table author
+create table unidirectionalAuthor
 (
     id    bigint not null auto_increment primary key,
     age   int          null,
@@ -6,7 +6,7 @@ create table author
     name  varchar(255) null
 );
 
-create table book
+create table unidirectionalBook
 (
     id        bigint not null auto_increment primary key,
     author_id bigint       null,

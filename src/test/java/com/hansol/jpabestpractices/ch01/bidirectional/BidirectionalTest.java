@@ -1,9 +1,5 @@
-package com.hansol.jpabestpractices.ch01;
+package com.hansol.jpabestpractices.ch01.bidirectional;
 
-import com.hansol.jpabestpractices.ch01.bidirectional.Author;
-import com.hansol.jpabestpractices.ch01.bidirectional.AuthorRepository;
-import com.hansol.jpabestpractices.ch01.bidirectional.Book;
-import com.hansol.jpabestpractices.ch01.bidirectional.BookRepository;
 import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.Test;
@@ -17,9 +13,9 @@ import java.util.ArrayList;
 
 @Transactional
 @SpringBootTest
-public class Ch01Test {
+public class BidirectionalTest {
 
-    private static final Logger log = LoggerFactory.getLogger(Ch01Test.class);
+    private static final Logger log = LoggerFactory.getLogger(BidirectionalTest.class);
 
     @Autowired
     private EntityManager entityManager;
