@@ -45,6 +45,9 @@ public class Author {
      * p.46
      * toString 사용 시 기본 속성만 포함해야함
      * 순환 참조 문제나 별도 SQL 문이 나갈 수 있기 때문에
+     * p.49
+     * 단방향 OneToMany 는 성능상 불리하니 피애햐하는 케이스
+     * OrderColumn 을 사용하더라도, JoinColumn 을 사용하더라도 불리
      */
     @ToString.Exclude
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "author", orphanRemoval = true)
