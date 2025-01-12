@@ -1,0 +1,15 @@
+create table author
+(
+    id    bigint not null auto_increment primary key,
+    age   int          null,
+    genre varchar(255) null,
+    name  varchar(255) null
+);
+
+create table book
+(
+    id        bigint not null auto_increment primary key,
+    author_id bigint       null,
+    isbn      varchar(255) null,
+    title     varchar(255) null
+);
