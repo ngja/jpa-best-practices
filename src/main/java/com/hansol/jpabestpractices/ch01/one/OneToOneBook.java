@@ -1,4 +1,4 @@
-package com.hansol.jpabestpractices.ch01.unidirectional;
+package com.hansol.jpabestpractices.ch01.one;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -8,8 +8,9 @@ import lombok.*;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name = "uni_book")
-public class UnidirectionalBook {
+@Entity(name = "one_book")
+public class OneToOneBook {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -18,12 +19,7 @@ public class UnidirectionalBook {
 
     private String title;
 
-    /**
-     * p.65
-     * ManyToOne 단방향
-     */
-    @ManyToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "author_id")
-    @ToString.Exclude
-    private UnidirectionalAuthor author;
+    private OneToOneAuthor author;
 }

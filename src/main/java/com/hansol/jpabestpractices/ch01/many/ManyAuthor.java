@@ -11,7 +11,7 @@ import java.util.Set;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
+@Entity(name = "many_author")
 public class ManyAuthor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
